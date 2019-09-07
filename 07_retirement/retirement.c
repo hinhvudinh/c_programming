@@ -13,13 +13,13 @@ void retirement(int startAge, double initial, retire_info working, retire_info r
   double balance = initial;
   
   for (int i = 0; i < working.months; i++){
-     printf("Age %3d month %2d you have $%.21f\n", (startAge + i) / 12, (startAge + i) % 12, balance);
+     printf("Age %3d month %2d you have $%.2f\n", (startAge + i) / 12, (startAge + i) % 12, balance);
     interest_earn = balance * working.rate_of_return;
     balance = balance + interest_earn + working.contribution;
   }
 
   for (int i = 0; i < retired.months; i++){
-    printf("Age %3d month %2d you have $%0.21f\n", (startAge + working.months + i) / 12,(startAge + working.months + i) % 12, balance);
+    printf("Age %3d month %2d you have $%0.2f\n", (startAge + working.months + i) / 12,(startAge + working.months + i) % 12, balance);
     interest_earn  = balance * retired.rate_of_return;
     balance = balance + interest_earn + retired.contribution;
   }
