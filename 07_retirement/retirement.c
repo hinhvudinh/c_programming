@@ -9,20 +9,19 @@ struct _retire_info{
 typedef struct _retire_info retire_info;
 
 void retirement(int startAge, double initial, retire_info working, retire_info retired){
+  double interest_earn = 0;
   double balance = initial;
-  double current_balance = balance;
   
   for (int i = 0; i < working.months; i++){
-    balance = current_balance * working.rate_of_return + working.contribution;
-    printf("Age %3d month %2d you have %.21f\n", (startAge + i) / 12, (startAge + i) % 12, balance); 
-    current_balance = balance;
+     printf("Age %3d month %2d you have %.21f\n", (startAge + i) / 12, (startAge + i) % 12, balance);
+    interest_earn = balance * working.rate_of_return;
+    balance = balance + interest_earn + working.contribution;
   }
 
   for (int i = 0; i < retired.months; i++){
-    balance = current_balance * retired.rate_of_return + retired.contribution;
-    printf("Age %3d month %2d you have %0.21f\n", (startAge + working.months + i) / 12,
-	   (startAge + working.months + i) % 12, balance);
-    current_balance = balance;
+    printf("Age %3d month %2d you have %0.21f\n", (startAge + working.months + i) / 12,(startAge + working.months + i) % 12, balance);
+    interest_earn  = balance * retired.rate_of_return;
+    balance = balance + interest_earn + retired.rate_of_return;
   }
 }
 
@@ -30,12 +29,12 @@ int main(){
   retire_info working;
   working.months = 489;
   working.contribution = 1000;
-  working.rate_of_return = 4.5 / 12;
+  working.rate_of_return = 4.5 / (100*12);
 
   retire_info retired;
   retired.months = 384;
   retired.contribution = -4000;
-  retired.rate_of_return = 1.0 / 12;
+  retired.rate_of_return = 1.0 / (100*12);
 
   int startAge = 327;
   int saving = 21345;
