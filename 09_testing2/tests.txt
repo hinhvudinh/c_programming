@@ -12,4 +12,15 @@ aa111 a2222
 111!!! 222!!!!
 abcde edcba
 aaaab aaaaa
+aaaaaaaaaa
+1111111111
+!!!!!!!!!
+abbbb abcde
+aabbb abcde
+aaabb abcde
+aaaab abcde
+aaaaa abcde
+abcde aaaaa
+aaaaa bb
+a aaaaa
 
