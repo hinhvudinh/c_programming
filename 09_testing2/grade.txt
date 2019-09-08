@@ -1,0 +1,11 @@
+Grading at Sun Sep  8 07:41:12 UTC 2019
+I expected to find a file called 'tests.txt' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+README
+#README#
+run_all.sh
+test.txt
+Can't proceed without tests.txt
+
+Overall Grade: FAILED
