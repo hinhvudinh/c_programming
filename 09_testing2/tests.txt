@@ -1,0 +1,15 @@
+aaaaa bbbbb
+aaaaa bbbbbb
+11122 222233
+11111 11111 11111
+a1a1a aaaaa
+a!a!a b!b!b
+11111 22222
+1!1!1 2!2!2!
+111aa 2222a
+aa111 a2222
+111aaa 222aaaa
+111!!! 222!!!!
+abcde edcba
+aaaab aaaaa
+
