@@ -23,4 +23,17 @@ aaaaa abcde
 abcde aaaaa
 aaaaa bb
 a aaaaa
+a1!aa 1!aa
+aaaaa abcdd
+aaaaa abddd
+aaaaa adddd
+aaaaa ddddd
+aaaaa bcdef
+bcdef aaaaa
+ddddd aaaaa
+adddd aaaaa
+abddd aaaaa
+abcdd aaaaa
+abcde aaaaa
+
 
