@@ -80,7 +80,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'K': temp.value = VALUE_KING;
   case 'A': temp.value = VALUE_ACE;
   default:
-    printf("Something wrong");
+    printf("Something wrong (value_let)\n");
     exit(EXIT_FAILURE);
   }
 
@@ -90,7 +90,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'd': temp.suit = DIAMONDS;
   case 'c': temp.suit = CLUBS;
   default:
-    printf("Something wrong");
+    printf("Something wrong (suit_let)\n");
     exit(EXIT_FAILURE);
   }
   
