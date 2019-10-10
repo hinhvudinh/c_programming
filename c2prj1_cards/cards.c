@@ -59,7 +59,7 @@ char suit_letter(card_t c) {
 
 void print_card(card_t c) {
   assert_card_valid(c);
-  printf("%c%c ",value_letter(c), suit_letter(c));
+  printf("%c%c",value_letter(c), suit_letter(c));
 }
 
 card_t card_from_letters(char value_let, char suit_let) {
@@ -89,6 +89,7 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'c': temp.suit = CLUBS;
   default: exit(EXIT_FAILURE);
   }
+  
   return temp;
 }
 
