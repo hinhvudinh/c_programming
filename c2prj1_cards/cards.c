@@ -79,7 +79,9 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'Q': temp.value = VALUE_QUEEN;
   case 'K': temp.value = VALUE_KING;
   case 'A': temp.value = VALUE_ACE;
-  default: exit(EXIT_FAILURE);
+  default:
+    printf("Something wrong");
+    exit(EXIT_FAILURE);
   }
 
   switch(suit_let){
@@ -87,7 +89,9 @@ card_t card_from_letters(char value_let, char suit_let) {
   case 'h': temp.suit = HEARTS;
   case 'd': temp.suit = DIAMONDS;
   case 'c': temp.suit = CLUBS;
-  default: exit(EXIT_FAILURE);
+  default:
+    printf("Something wrong");
+    exit(EXIT_FAILURE);
   }
   
   return temp;
