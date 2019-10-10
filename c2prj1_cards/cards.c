@@ -58,42 +58,49 @@ char suit_letter(card_t c) {
 }
 
 void print_card(card_t c) {
-  assert_card_valid(c);
+  // assert_card_valid(c);
   printf("%c%c",value_letter(c), suit_letter(c));
 }
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
-
+  //temp.value = value_let;
+  //temp.suit = suit_let;
   switch(value_let){
-  case '2': temp.value = 2;
-  case '3': temp.value = 3;
-  case '4': temp.value = 4;
-  case '5': temp.value = 5;
-  case '6': temp.value = 6;
-  case '7': temp.value = 7;
-  case '8': temp.value = 8;
-  case '9': temp.value = 9;
-  case '0': temp.value = 10;
-  case 'J': temp.value = VALUE_JACK;
-  case 'Q': temp.value = VALUE_QUEEN;
-  case 'K': temp.value = VALUE_KING;
-  case 'A': temp.value = VALUE_ACE;
+  case '2': temp.value = 2; break;
+  case '3': temp.value = 3; break;
+  case '4': temp.value = 4; break;
+  case '5': temp.value = 5; break;
+  case '6': temp.value = 6; break;
+  case '7': temp.value = 7; break;
+  case '8': temp.value = 8; break;
+  case '9': temp.value = 9; break;
+  case '0': temp.value = 10; break;
+  case 'J': temp.value = VALUE_JACK; break;
+  case 'Q': temp.value = VALUE_QUEEN; break;
+  case 'K': temp.value = VALUE_KING; break;
+  case 'A': temp.value = VALUE_ACE; break;
   default:
-    printf("Something wrong (value_let)\n");
-    exit(EXIT_FAILURE);
+    temp.value = -1;
+    break;
   }
 
   switch(suit_let){
-  case 's': temp.suit = SPADES;
-  case 'h': temp.suit = HEARTS;
-  case 'd': temp.suit = DIAMONDS;
-  case 'c': temp.suit = CLUBS;
+  case 's': temp.suit = SPADES; break;
+  case 'h': temp.suit = HEARTS; break;
+  case 'd': temp.suit = DIAMONDS; break;
+  case 'c': temp.suit = CLUBS; break;
   default:
-    printf("Something wrong (suit_let)\n");
-    exit(EXIT_FAILURE);
+    temp.suit = '?';
+    break;
   }
   
+  assert_card_valid(temp);
+  
+  // temp.value = value_letter(temp);
+  //temp.suit = value_letter(temp);
+  //print_card(temp);
+  // assert_card_valid(temp);
   return temp;
 }
 
